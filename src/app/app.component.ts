@@ -15,7 +15,7 @@ export class AppComponent {
   ngOnInit(): void {}
 
   onSubmit() {
-    this.appService.getSequence().subscribe((sequence) => {
+    this.appService.getSequence(this.value).subscribe((sequence) => {
       this.sequence = sequence;
       this.value = '';
     });

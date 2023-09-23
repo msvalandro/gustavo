@@ -10,7 +10,7 @@ export class AppService {
 
   constructor(private http: HttpClient) {}
 
-  getSequence(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getSequence(value: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${value}`);
   }
 }
